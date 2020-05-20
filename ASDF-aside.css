@@ -1,0 +1,84 @@
+/**
+ Displays rows of the same height with an aside element
+ that has width = % that you set.
+ That element is also vertically centered in the row.
+ 
+ USAGE:
+ 
+<div class="ASDF-row-wrapper">
+    <div class="ASDF-row">
+        <div class="ASDF-aside-alternating"><!--div class="ASDF-aside"-->
+            <img class="ASDF-aside-content" src="placeholder.png">
+        </div>
+        <h1>Lorem Ipsum</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+</div>
+*/
+
+.ASDF-row
+{
+    max-width: 900px; /* edit this */
+    height: 300px; /* edit this */
+    
+    margin: 0 auto;
+    padding: 20px; /* edit this */
+}
+
+.ASDF-aside, .ASDF-aside-alternating
+{
+    width: 30%; /* edit this */
+    height: 100%;
+    
+    position: relative;
+    display: inline-block;
+    
+    float: left;
+    margin-right: 20px; /* edit this */
+}
+
+.ASDF-row-wrapper:nth-child(even) .ASDF-aside-alternating
+{
+    float: right;
+    margin-left: 20px; /* edit this */
+    margin-right: 0;
+}
+
+.ASDF-aside-content
+{
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/** COLORS FOR DEBUG */
+/*
+.ASDF-row-wrapper
+{
+    background-color: rgb(220, 220, 220);
+}
+
+.ASDF-row-wrapper:nth-child(even)
+{
+    background-color: rgb(240, 240, 240);
+}
+
+.ASDF-row
+{
+    background-color: rgb(200, 200, 200);
+    border-bottom: 1px solid black;
+}
+
+.ASDF-aside
+{
+    background-color: rgb(180, 180, 180);
+}
+*/
